@@ -10,7 +10,8 @@ clusterGroup:
   - vault
   - golang-external-secrets
   - argo-rollouts
-
+  - bluegreen
+  
   subscriptions:
     acm:
       name: advanced-cluster-management
@@ -51,6 +52,12 @@ clusterGroup:
       project: argo-rollouts
       path: charts/all/argo-rollouts
 
+    bluegreen:
+      name: bluegreen
+      namespace: bluegreen
+      project: argo-rollouts
+      path: charts/all/bluegreen
+     
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
     # The default schedule is every 10 minutes: imperative.schedule
