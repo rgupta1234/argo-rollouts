@@ -1,7 +1,7 @@
 clusterGroup:
   name: hub
   isHubCluster: true
-  #lkjkl Note: setting this to true stores the vault unseal keys inside a cluster secret and
+  # Note: setting this to true stores the vault unseal keys inside a cluster secret and
   # is fundamentally insecure
   insecureUnsealVaultInsideCluster: true
 
@@ -11,7 +11,7 @@ clusterGroup:
   - golang-external-secrets
   - argo-rollouts
   - bluegreen
-  
+
   subscriptions:
     acm:
       name: advanced-cluster-management
@@ -57,7 +57,7 @@ clusterGroup:
       namespace: bluegreen
       project: argo-rollouts
       path: charts/all/bluegreen
-     
+
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
     # The default schedule is every 10 minutes: imperative.schedule
